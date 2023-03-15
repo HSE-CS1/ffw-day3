@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="w-50 m-auto">
+  <h1 class="ffw-heading">Not a member? Join Now!!</h1>
+  <form action="/join" method="post" autocomplete="off">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" autocomplete="off" autofocus placeholder="name@example.com" required value="{{ email }}">
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm">
+        <div class="mb-3">
+      <label for="first_name" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="first_name" name="first_name" autocomplete="off" placeholder="First" required>
+    </div>
+      </div>
+      <div class="col-12 col-sm">
+        <div class="mb-3">
+      <label for="last_name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="last_name" name="last_name" autocomplete="off" placeholder="Last" required>
+    </div>
+      </div>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Join FFW</button>
+    
+  </form>
+  <p class="text-center text-muted">Already a member? 
+  <a href="/login" class="badge rounded-pill text-bg-info">Login</a>
+  </p>
+</div>
+{% endblock %}

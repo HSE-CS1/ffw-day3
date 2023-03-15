@@ -1,0 +1,22 @@
+<div>
+  <div class="p-2 d-flex align-items-center gap-2">
+    <h1 class="display-5 ffw-heading">
+      NAME: {{ session.get("cur_member").first_name }}
+    </h1> 
+    <p class="display-5">
+      <a href="/update/{{ session.get('member_index') }}">
+        <i class="bi bi-person-gear"></i>
+      </a>
+    </p>
+    <p class="display-5">
+      <a href="/logout"><i class="bi bi-box-arrow-right"></i></a>
+    </p>
+    
+  </div>
+  <h3 class="ffw-body-text"># OF WORKOUTS: 
+  {{ session.get("cur_member").number_of_workouts }}
+  </h3>
+  <h3 class="ffw-body-text">LAST WORKOUT: 
+  {{ session.get("cur_member").last_workout }}
+  </h3>
+</div>

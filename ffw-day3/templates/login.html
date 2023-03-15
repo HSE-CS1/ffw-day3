@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main class="form-signin w-100 m-auto text-center ffw-login-form">
+  <form action="/login" method="post">
+    <img class="mb-4" src="/static/dumbell.png" alt="yellow dumbell" height="60">
+    <h1 class="h3 mb-3 fw-normal ffw-heading">Let's Get Fit</h1>
+   
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingEmail" placeholder="Email" name="member_email" autocomplete="off", autofocus required>
+      <label for="floatingEmail">Email</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-success" type="submit">Log in</button>
+  </form>
+  <img src="/static/workout.jpg" alt="workout image" class="img-fluid text-center mt-4">
+  <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+</main>
+
+{% endblock %}
