@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container">
+  <div class="d-flex">
+    <h1 class="flex-grow-1 p-2 display-5 ffw-heading">
+      Welcome to Fishel Fitness World
+    </h1>    
+  </div>
+
+  
+<div class="row mb-3">
+  <div class="col-12 col-lg-6 p-5">
+  {% if not session.get("logged_in") %}
+    {% include "introbtns.html" %}
+  {% else %}
+    {% include "memberinfo.html" %}
+  {% endif %}
+  </div>
+  <div class="d-none d-lg-block col-6 p-0">
+    <img src="/static/equipment.jpg" alt="gym equipment" class="img-fluid">
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-6 p-2">
+    <div class="d-flex gap-3 mb-4">
+      <div>
+      <h4 class="ffw-numbers">01</h4>
+        <p class="ffw-heading">Personal Trainers</p>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam itaque accusantium, sed recusandae minus obcaecati quaerat harum architecto atque facere voluptate molestias veritatis quae tempore at corporis ad aliquam magni unde nobis dolorem odit. Eum!
+      </div>
+      
+    </div>
+    <div class="d-flex gap-3 mb-4">
+      <div>
+      <h4 class="ffw-numbers">02</h4>
+        <p class="ffw-heading">Fitness Coaches</p>
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur omnis modi ipsum voluptatem, dignissimos obcaecati et nulla! Tenetur ut soluta ipsam blanditiis. Autem in accusantium fugit quasi ducimus molestiae. Officiis, molestias, nulla praesentium totam veniam corporis nihil voluptas, reprehenderit accusamus mollitia tempora distinctio deleniti obcaecati!
+      </div>
+      
+    </div>
+    <div class="d-flex gap-3 mb-4">
+      <div>
+      <h4 class="ffw-numbers">03</h4>
+        <p class="ffw-heading">Online Fitness Classes</p>
+      </div>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium amet dolor deserunt soluta nihil quis accusantium consequatur. Libero quasi accusantium exercitationem repellat, sit sed natus dolore, necessitatibus ipsa quo ipsam excepturi magnam sapiente esse? Adipisci id rem repellat est quaerat tenetur similique, minus rerum consequatur fugit hic magnam facere iusto debitis natus quo non consectetur, atque inventore. Aliquid, ipsum enim?
+      </div>
+      
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="w-75 mx-auto d-flex flex-column mb-3 mt-5">
+    <h2 class="display-3 mb-1">
+      OUR PROGRAMS
+    </h2>
+    <p class="ffw-body-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ratione voluptas accusamus neque quis laborum!</p>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
